@@ -2,12 +2,13 @@ version: '3.8'
 
 services:
   frontend:
+    container_name: frontend
     build:
       context: ./frontend
       dockerfile: Dockerfile
     image: frontend-service:2.0
     ports:
-      - "3000:80"
+      - "4200:80"
     depends_on:
       backend:
         condition: service_healthy
@@ -21,11 +22,11 @@ services:
       retries: 3
 
   backend:
+    container_name: backend
     build:
       context: ./backend
       dockerfile: Dockerfile
     image: backend-service:2.0
-    # Порт не пробрасываем наружу - общение только через внутреннюю сеть
     expose:
       - "8000"
     volumes:

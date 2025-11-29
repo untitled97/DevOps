@@ -1,0 +1,12 @@
+# Настройки приложения
+app_name: "my-app"
+app_directory: "/opt/{{ app_name }}"
+
+frontend_repo: "https://github.com/untitled97/frontend.git"
+backend_repo: "https://github.com/untitled97/backend.git"
+devops_repo: "https://github.com/untitled97/DevOps.git"
+
+frontend_version: "v2.0"
+backend_version: "v2.0"
+
+docker_compose_version: "v2.24.0"

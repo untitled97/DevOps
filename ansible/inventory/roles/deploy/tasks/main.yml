@@ -1,0 +1,16 @@
+- name: Install Docker
+  include_tasks: subtasks/install.yml
+  tags: install
+  
+- name: Clone repositores
+  include_tasks: subtasks/clone.yml
+  tags: clone
+
+- name: Start containers
+  include_tasks: subtasks/start.yml
+  tags: start
+
+- name: Stop containers
+  include_tasks: subtasks/stop.yml
+  tags: stop
+

@@ -1,0 +1,3 @@
+- name: Stop docker-compose
+  shell: docker_compose -f "{{ compose_file }}" down
+  tags: always
