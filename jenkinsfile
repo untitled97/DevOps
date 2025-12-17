@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    
+    stages {
+    
+        stage('Prepare Enviromment') {
+            steps {
+                sh """
+                cd ansible
+                ansible-playbook firstPlaybook.yml --tags clone
+                """
+            }
+        }
+
+
+        stage('Launch Applications') {
+            steps {
+                sh """
+                cd ansible
+                ansible-playbook firstPlaybook.yml --tags start
+                """
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+- name: Deploy Microservice
+  hosts: prod
+  become: yes
+  roles:
+    - deploy

@@ -5,4 +5,5 @@ devops_repo: "https://github.com/untitled97/DevOps.git"
 frontend_version: "v2.0"
 backend_version: "v2.0"
 
-docker_compose_version: "v2.24.0"
+project_root: "/home/ikondratiev/projects"
+compose_file: "/home/ikondratiev/projects/DevOps/docker-compose.yaml"
