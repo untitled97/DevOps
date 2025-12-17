@@ -3,7 +3,7 @@ version: '3.8'
 services:
   jenkins:
   build:
-    comtext:  .
+    context:  .
     dockerfile: Dockerfile
   container_name: jenkins
   restart: unless-stopped
